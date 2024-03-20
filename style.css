@@ -1,6 +1,8 @@
 html{
   /* コピー禁止！！ */
   -webkit-user-select: none;
+  /* ズーム禁止 */
+  touch-action: pan-x pan-y;
 }
 
 body{
@@ -113,26 +115,26 @@ main{
   cursor: pointer;
   display: flex;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 0;
   width: 90%;
 }
 
 .link_list_wrap .link_list_inner .link_list_content .link_list_item .item_img{
   border: 2px solid #ff7b6d;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
   position: relative;
 }
 
 .link_list_wrap .link_list_inner .link_list_content .link_list_item .item_img::before{
   background-image: url('https://media2.tokyodisneyresort.jp/asset/images/common/icon_parade.svg');
-  background-size: 25px 25px;
+  background-size: 27px 27px;
   background-repeat: no-repeat;
   content: '';
   display: block;
-  height: 25px;
-  width: 25px;
+  height: 27px;
+  width: 27px;
   position: absolute;
   top: 50%;
   left: 52%;
@@ -142,7 +144,7 @@ main{
 .link_list_wrap .link_list_inner .link_list_content .link_list_item .item_txt_box{
   font-size: 0.75rem;
   margin: 0 auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 90px);
 }
 
 .link_list_wrap .link_list_inner .link_list_content .link_list_item .item_txt_box > span{
