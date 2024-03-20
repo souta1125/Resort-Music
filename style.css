@@ -1,0 +1,164 @@
+html{
+  /* コピー禁止！！ */
+  -webkit-user-select: none;
+}
+
+body{
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  position: relative;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.page_wrap{
+  background-color: #014056;
+  background-image: url('./img/bg.jpg');
+  color: #003a66;
+  height: 100%;
+  width: 100%;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 0;
+}
+
+.page_wrap::after{
+  background-image: url('./img/main_bottomline.png');
+  background-repeat: repeat-x;
+  background-size: 930px 126px;
+  content: '';
+  display: block;
+  height: 126px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* header */
+header{
+  width: 100%;
+  z-index: 2;
+}
+
+header .header_inner{
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+header .header_inner .header_park_selector{
+  display: flex;
+}
+
+header .header_inner .header_park_selector .header_park_selector_item{
+  border-bottom: 2px solid #9fbdd2;
+  color: #9fbdd2;
+  cursor: pointer;
+  font-size: 0.80rem;
+  font-weight: 600;
+  padding: 12px 0;
+  text-align: center;
+  width: 50%;
+}
+
+header .header_inner .header_park_selector .header_park_selector_item.is_tdl.is_active{
+  border-bottom-color: #ff6579;
+  color: #ff6579;
+}
+
+header .header_inner .header_park_selector .header_park_selector_item.is_tds.is_active{
+  border-bottom-color: #00d0bc;
+  color: #00d0bc;
+}
+
+main{
+  background-color: #fff;
+  box-shadow: 0 0 3px #333;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 768px;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 1;
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_content_ttl{
+  background-color: #fff;
+  border-bottom: 1px solid #9fbdd2;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 0 10px 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_item{
+  align-items: center;
+  border-bottom: 1px solid #9fbdd2;
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_item .item_img{
+  border: 2px solid #ff7b6d;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_item .item_img::before{
+  background-image: url('https://media2.tokyodisneyresort.jp/asset/images/common/icon_parade.svg');
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_item .item_txt_box{
+  font-size: 0.75rem;
+  margin: 0 auto;
+  width: calc(100% - 100px);
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_item .item_txt_box > span{
+  display: block;
+  line-height: 1.70;
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_item .item_txt_box .item_ttl{
+  font-size: 0.90rem;
+  font-weight: 600;
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_item .item_txt_box .item_tagArea{
+  color: #ffb200;
+}
+
+.link_list_wrap .link_list_inner .link_list_content .link_list_item .item_txt_box .item_scheduleArea span.is_exceeded{
+  color: #9fbdd2;
+}
